@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>美味しい入れ方| Amber Moon</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- レスポンシブ対応 -->
+<meta name="viewport" content="width=device-width">
+<!-- フォント設定 -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<!-- jQuery配置 --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<!-- スマホサイズメニューボタン設定 --> 
+<!--<script>
+	function menuButton() {
+		var mymenu = document.querySelector('#menu');
+		
+			mymenu.style.maxHeight = mymenu.scrollHeight + "px";
+	}
+	</script> 
+-->
+<!--  右からスライドするメニュー --> 
+<script>
+	function slidemenu() {
+		document.querySelector('body').classList.toggle('open');
+	}
+	</script>
+
+</head>
+
+<body id="top">
+<!--- ヘッダー領域 --->
+<header> <a href="index.html" id="logo"><img src="img/logo_moon.png" alt="トップロゴ" class="head_logo"></a> <a href="index.html" id="shop_name"><img  src="img/shop_name1.png" alt="紅茶専門店　琥珀の月" class="head_shop_name"> </a> </header>
+<!--ナビゲーション--> 
+<button type="button" onClick="slidemenu()"> <span class="fa fa-bars"></span> <span class="fa fa-times"></span> <span class="sr-only">MENU</span> </button>
+<nav id="menu" >
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="committ.html">こだわり</a></li>
+    <li><a href="#">商品一覧</a></li>
+    <li><a href="howto.html">美味しい入れ方</a></li>
+    <li><a href="#">お知らせ</a></li>
+    <li><a href="#">アクセス</a></li>
+  </ul>
+</nav>
+<!--スマホメニュー表示時にメニュー下を操作できなくして、領域をタップしたらメニューを閉じられるようにする--> 
+<span class="page-cover" onClick="slidemenu()"></span> 
+
+<!--- メインイメージ --->
+<div id="main">
+  <img src="img/howtomaketea_main.jpg" alt="淹れ方メイン画像" class="howto_main_img">
+</div>
+<!-- ゴールデンルール -->
+<div id="golden_rule">
+  <h1>紅茶の入れ方の基本<br>
+<span>（ゴールデンルール）</span></h1>
+  <div class="gold_rule water">
+	  <img src="img/drop_icon.png" alt="水滴アイコン" class="howto_icon drop_icon">
+    <h2 >汲みたての水を使いましょう</h2>
+	  
+    <p class="setumei">紅茶には軟水が適しています。日本では軟水に恵まれているので、汲みたての空気を多く含んだ水は紅茶に最適です。<br>
+      お湯は沸騰直後（100℃）のものが良く、温かったり沸騰しすぎたお湯では紅茶の香りが引き立ちません。</p>
+  </div>
+  <div class="gold_rule pot">
+	  <img src="img/howto_pot_icon.png" alt="ティーポットアイコン" class="howto_icon howto_pot_icon">
+    <h2>鉄分の含まれたポットは避けましょう</h2>
+    <p class="setumei">陶磁器か銀製のティーポット、あるいはガラス製のティーサーバーを使いましょう。もちろん緑茶用の急須でも構いません。<br>
+      鉄分を含むポットの仕様は、紅茶のタンニンが鉄分と化合して香味を損なうだけでなく、紅茶の色を黒っぽくしてしまいます。 </p>
+  </div>
+  <div class="gold_rule cup">
+	  <img src="img/teacop_icon.png" alt="ティーカップアイコン" class="howto_icon teacup_icon" >
+    <h2>内側は白が望ましい</h2>
+    <p class="setumei">紅茶の命は色と香り。その色を楽しむために内側は白く、香りが広がりやすい浅い形のものを選びましょう。</p>
+  </div>
+</div>
+<!--サブメニュー-->
+<div id="sub">
+  <div class="leaf_tea">
+	  <h1>リーフティの美味しい入れ方</h1>
+	  <h2>１．お湯を沸かす</h2>
+   <p class="sub_howto_tejun">やかんに汲みたての水を入れて、火にかけ沸騰させる。<br>
+      5円玉くらいの泡がポコポコ出ている状態が目安です。</p>
+	  <h2>２．ポットとカップを温める</h2>
+    <p class="sub_howto_tejun">紅茶を入れる前にまずポットとカップにお湯を注ぎ、全体を温めておきます。</p>
+	  <h2>３．茶葉を入れる</h2>
+    <p class="sub_howto_tejun">温めたポットに、ティースプーン１杯（2~3g）を1人分として、人数分の茶葉を入れます。</p>
+	  <h2>４．勢いよくお湯を注ぐ</h2>
+    <p class="sub_howto_tejun">沸騰したてのお湯を人数分（1杯分150~160mlが目安）注ぎ、すぐにフタをして村してください。<br>
+      この時、沸騰したお湯を勢いよく注ぐのがコツです。</p>
+	  <h2>５．しっかり蒸らす</h2>
+    <p class="sub_howto_tejun">蒸らす時間は、細かい茶葉は２分半〜３分、大きい茶葉は3〜4分が目安です。<br>
+      美味しい紅茶を入れるには、温度を下げないことがポイントです。 </p>
+	  <h2>６．軽く混ぜる</h2>
+    <p class="sub_howto_tejun">ポットの中をスプーンで軽く一混ぜする。</p>
+	  <h2>７．カップに注ぐ</h2>
+    <p class="sub_howto_tejun">茶こしで茶ガラをこしながら、濃さが均一になるように回し注ぎましょう。<br>
+      『ベスト・ドロップ』とよばれる最後の１滴まで注いでください。 </p>
+  </div>
+	<div class="teabag">
+		<h1>ティーバッグの美味しい入れ方</h1>
+		<h2>１．お湯を沸かす</h2>
+    <p class="sub_howto_tejun">やかんに汲みたての水を入れて、火にかけ沸騰させる。<br>
+      5円玉くらいの泡がポコポコ出ている状態が目安です。</p>
+		 <h2>２．カップを温める</h2>
+    <p class="sub_howto_tejun">紅茶を入れる前にまずカップにお湯を注ぎ、全体を温めておきます。</p>
+		<h2>３．お湯を注ぐ</h2>
+    <p class="sub_howto_tejun">カップを温めていたお湯を捨て、やかんからお湯をカップに1杯分（1杯分150~160mlが目安）注ぎます。</p>
+		<h2>４．ティーバッグを入れる</h2>
+    <p class="sub_howto_tejun">お湯を注いだら、すぐにティーバッグを、カップの縁からすべらせるように静かに入れます。</p>
+		<h2>５．しっかり蒸らす</h2>
+    <p class="sub_howto_tejun">受け皿などでカップにフタをして蒸らします。<br>
+      蒸らす時間は、パッケージに書かれている時間を参考にしてください。 </p>
+		<h2>６．ティーバッグを取り出す</h2>
+    <p class="sub_howto_tejun">蒸し終わったら、ティーバッグを軽く数回振って、静かにカップから引き上げます。</p>
+</div>
+</div>
+
+<!-- フッター -->
+<footer> <a href="#"  id="pagetop"><i class="fas fa-arrow-circle-up pagetop_color" ></i></a> <img src="img/logo_moon.png" alt="フッターロゴ" class="foot_logo">
+  <div class="shop_info1">
+    <p class="foot_shopname_kanji">紅茶専門店<span class="foot_shopname">琥珀の月</span>- Amber Moom -</p>
+  </div>
+  <div class="shop_info2">
+    <p class="open_close">営業時間：10:00 - 18:00</p>
+    <p class="regular_holiday">定休日：毎週水曜日</p>
+  </div>
+  <div class="shop_info3">
+    <p class="address">鳥取県八頭郡智頭町智頭111-123</p>
+    <p class="tel">TEL 0858-75-1111</p>
+  </div>
+  <div id="footer_navi">
+    <ul>
+      <li><a href="#">利用規約</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </div>
+  <div class="copyright">
+    <p>Copyright &copy; 紅茶専門店　琥珀の月</p>
+  </div>
+</footer>
+</body>
+</html>
