@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Home | Amber Moon</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- レスポンシブ対応 -->
+<meta name="viewport" content="width=device-width">
+<!-- フォント設定 -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<!-- jQuery配置 --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="js/jquery.bxslider.min.js"></script>
+<link  rel="stylesheet" href="css/jquery.bxslider.css">
+<!-- スライドショーのjQuery --> 
+<script>
+  $(document).ready(function(){
+    $('.slider').bxSlider({ 
+		mode: 'fade',
+		auto: true,
+		speed: 7000,
+		pause: 10000
+	});	 
+  });
+	</script> 
+<!-- スマホサイズメニューボタン設定 --> 
+<!-- 上からメニューは高さをとってしまうのでやめる
+<script>
+	function menuButton() {
+		var mymenu = document.querySelector('#menu');
+	if (mymenu.style.maxHeight){
+		mymenu.style.maxHeight = null;
+	} else {
+			mymenu.style.maxHeight = mymenu.scrollHeight + "px";
+	}
+	}
+	</script> --> 
+<!--  右からスライドするメニュー --> 
+<script>
+	function slidemenu() {
+		document.querySelector('body').classList.toggle('open');
+	}
+	</script>
+</head>
+
+<body id="top">
+<!--- ヘッダー領域 --->
+<header> <a href="index.html" id="logo"><img src="img/logo_moon.png" alt="トップロゴ" class="head_logo"></a> <a href="index.html" id="shop_name"><img  src="img/shop_name1.png" alt="紅茶専門店　琥珀の月" class="head_shop_name"> </a> </header>
+<!--ナビゲーション-->
+<button type="button" onClick="slidemenu()"> <span class="fa fa-bars"></span> <span class="fa fa-times"></span> <span class="sr-only">MENU</span> </button>
+<nav id="menu" >
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="committ.html">こだわり</a></li>
+    <li><a href="#">商品一覧</a></li>
+    <li><a href="howto.html">美味しい入れ方</a></li>
+    <li><a href="#">お知らせ</a></li>
+    <li><a href="#">アクセス</a></li>
+  </ul>
+</nav>
+<!--スマホメニュー表示時にメニュー下を操作できなくして、領域をタップしたらメニューを閉じられるようにする--> 
+<span class="page-cover" onClick="slidemenu()"></span> 
+<!--- メインイメージ --->
+<div id="main">
+  <ul class="slider">
+    <li><img src="img/mainimage_luna_02.jpg" alt="メイン月"></li>
+    <li><img src="img/main_image2_tea.jpg" alt="メイン紅茶"></li>
+    <li><img src="img/main_image3_leavs.jpg" alt="メイン紅茶の葉"></li>
+  </ul>
+</div>
+<!-- コンセプト -->
+<div id="concept">
+  <h1>琥珀色に魅せられて</h1>
+  <img src="img/concept.jpg" alt="マジックアワー" class="img_magic">
+  <div class="concept_txt">
+    <p>ほんのひとときのマジックアワーを。</p>
+    <p>紅茶の琥珀色に魅せられて、魔女のティータイムに紛れ込んだような、そんな現実と少し離れた時間をちょっとだけ過ごすのもたまにはいいものです。</p>
+    <p>そんな気分を過ごせる香りと美しい色合いの紅茶をご用意いたしました。ぜひ堪能してください。</p>
+  </div>
+</div>
+<!--サブメニュー-->
+<div id="sub">
+  <div class="sub_leaf_img"> <a href="committ.html"><img src="img/tea_leavs1.jpg" alt="こだわり" class="sub_image"></a></div>
+  <div class="sub_caption leaf_caption"> <img src="img/icon_leaf.png" class="sub_icon icon_leaf" alt="葉っぱアイコン">
+    <p class="sub_comment">取り扱っているのはインド産の高級茶葉<br>
+      ダージリン、アッサム、ニルギリ </p>
+  </div>
+  <div class="sub_linup_img"><a href="#"><img src="img/tea_linup1.jpg" alt="商品一覧" class="sub_image"></a> </div>
+  <div class="sub_caption linup_caption">
+    <p class="sub_comment">当店オリジナルのブレンドティーもぜひお召し上がりください</p>
+    <img src="img/icon_tea.png" class="sub_icon icon_cup" alt="カップアイコン"> </div>
+  <div class="sub_howto_image"><a href="howto.html"><img src="img/howto_tea1.jpg" alt="美味しい入れ方" class="sub_image"></a> </div>
+  <div class="sub_caption howto_caption"> <img src="img/icon_pot.png" class="sub_icon icon_pot" alt="ポットアイコン">
+    <p class="sub_comment">リーフ、ティーバックどちらもお家で手軽に美味しく</p>
+  </div>
+  <div class="sub_shop_image"> <a href="#"><img src="img/shop1.jpg" alt="アクセス" class="sub_image"></a> </div>
+  <div class="sub_caption shop_caption">
+    <p class="sub_comment">テイスティングしていただけます、気軽にお立ち寄りください</p>
+    <img src="img/icon_shop.png" class="sub_icon icon_shop" alt="ショップアイコン"> </div>
+</div>
+<!-- フッター -->
+<footer> <a href="#"  id="pagetop"><i class="fas fa-arrow-circle-up pagetop_color" ></i></a> <img src="img/logo_moon.png" alt="フッターロゴ" class="foot_logo">
+  <div class="shop_info1">
+    <p class="foot_shopname_kanji">紅茶専門店<span class="foot_shopname">琥珀の月</span>- Amber Moom -</p>
+  </div>
+  <div class="shop_info2">
+    <p class="open_close">営業時間：10:00 - 18:00</p>
+    <p class="regular_holiday">定休日：毎週水曜日</p>
+  </div>
+  <div class="shop_info3">
+    <p class="address">鳥取県八頭郡智頭町智頭111-123</p>
+    <p class="tel">TEL 0858-75-1111</p>
+  </div>
+  <div id="footer_navi">
+    <ul>
+      <li><a href="#">利用規約</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </div>
+  <div class="copyright">
+    <p>Copyright &copy; 紅茶専門店　琥珀の月</p>
+  </div>
+</footer>
+</body>
+</html>
