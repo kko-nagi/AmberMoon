@@ -1,0 +1,883 @@
+@charset "utf-8";
+/* CSS Document */
+/*↓↓↓↓　Homeページここから　↓↓↓↓*/
+body {
+  margin: 0;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  color: #E07104;
+  background-color: #000028;
+}
+/*ヘッダーロゴと店名*/
+.head_logo {
+  width: 180px;
+}
+.head_shop_name {
+	width: 220px;
+  padding-top: 30px;
+  margin-left: -30px;
+}
+/* メニュー */
+nav {
+  margin: 0;
+  padding: 0;
+}
+#menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+#menu li a {
+  display: block;
+  padding: 15px 10px;
+  color: #E07104;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3 ease 0s;
+}
+#menu li a:hover {
+  animation-name: gradation;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+@keyframes gradation {
+  0% {
+    background: #000028;
+    color: #E07104;
+  }
+  100% {
+    background: #8F91AA;
+    color: #000028;
+    opacity: 0.8;
+  }
+}
+/* トグルボタン */
+button {
+	margin-right: 20px;
+	padding: 6px;
+	border: none;
+	background-color: transparent;
+	color: #E07104;
+	font-size: 32px;
+	cursor: pointer;
+	display: none;
+}
+button:focus {
+	outline: none;
+}
+
+
+/* メイン画像 */
+#main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#main img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+/* コンセプト */
+#concept {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #8F91AA;
+}
+#concept h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#concept .img_magic {
+  margin: 10px;
+  padding: 0;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+#concept p {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+/* サブメニュー */
+.sub_image {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+.sub_caption {
+  display: flex;
+  height: 130px;
+}
+.sub_icon {
+  margin: 15px;
+  width: 80px;
+  height: 80px;
+}
+.sub_caption p {
+  display: block;
+  margin: 0;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000028;
+  position: relative;
+  top: 20px;
+}
+.leaf_caption {
+  background-color: rgba(165, 235, 188, 0.8);
+}
+.linup_caption {
+  background-color: rgba(247, 244, 211, 0.8);
+  justify-content: flex-end;
+}
+.howto_caption {
+  background-color: rgba(158, 219, 247, 0.8);
+}
+.shop_caption {
+  background-color: rgba(249, 191, 231, 0.8);
+  justify-content: flex-end;
+}
+/* フッター */
+footer {
+  border-top: 1px solid #8F91AA;
+  font-size: 14px;
+}
+footer p {
+  margin: 0;
+}
+#pagetop {
+  margin-top: 20px;
+  text-align: right;
+}
+.pagetop_color {
+  font-size: 48px;
+  color: #E07104;
+  margin-right: 20px
+}
+.foot_logo {
+  width: 200px;
+  padding: 0;
+  margin: 0;
+}
+.foot_shopname {
+  padding: 0 20px;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+#footer_navi ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+#footer_navi li a {
+  display: block;
+  padding: 15px;
+  color: #E07104;
+}
+#footer_navi li a:hover {
+  opacity: 0.7;
+	text-decoration: none;
+}
+.copyright {
+  font-size: 10px;
+}
+
+
+/* グリッド */
+/* >>>>> ボディ <<<<< */
+body {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+}
+button {
+	grid-column-start: 3;
+	grid-row-start: 1;
+	justify-self: end;
+	align-self: center;
+}
+nav {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  align-self: end;
+  justify-self: center;
+}
+#main {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 3;
+}
+#concept {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+#sub {
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+footer {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* >>>>> ヘッダ <<<<< */
+header {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: auto auto;
+}
+#logo {
+  grid-column-start: 2;
+  justify-self: end;
+}
+#shop_name {
+  grid-column-start: 3;
+}
+/* >>>>> コンセプト <<<<< */
+#concept {
+  display: grid;
+  grid-template-columns: 2fr 15px 3fr;
+  grid-template-rows: auto auto
+}
+#concept .img_magic {
+  margin-top: 20px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  justify-self: center;
+  align-self: start;
+}
+#concept h1 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+#concept .concept_txt {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+/* >>>>> サブメニュー <<<<< */
+#sub {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 3fr 2fr 3fr 30px 3fr 2fr 3fr;
+}
+.sub_leaf_img {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.leaf_caption {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  align-self: end;
+  margin-left: -100px;
+}
+.leaf_caption p {
+  padding-left: 10px;
+}
+.sub_linup_img {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+}
+.linup_caption {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  align-self: end;
+  margin-right: -100px;
+}
+.linup_caption p {
+  padding-right: 0;
+}
+.sub_howto_image {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 5;
+  grid-row-end: span 2;
+}
+.howto_caption {
+  grid-column-start: 3;
+  grid-row-start: 5;
+  align-self: end;
+  margin-left: -100px;
+}
+.howto_caption p {
+  padding-left: 10px;
+}
+.sub_shop_image {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: -3;
+  grid-row-end: span 2;
+}
+.shop_caption {
+  grid-column-start: 1;
+  grid-row-start: -2;
+  align-self: end;
+  margin-right: -100px;
+}
+.shop_caption p {
+  padding-right: 0;
+}
+/*↓↓↓↓　こだわりページここから　↓↓↓↓*/
+#production_area {
+	grid-column-start: 2;
+	grid-row-start: 4;
+}
+.kodawari_main_img {
+	max-width: 100%;
+}
+
+	
+}
+
+/*↑↑↑↑　こだわりページここまで　↑↑↑↑*/
+
+/*↓↓↓↓　紅茶入れ方ページここから　↓↓↓↓*/
+/* メイン画像 */
+.howto_main_img {
+	max-width: 100%;
+}
+#production_area h1 {
+	grid-column-start: 2;
+	margin-left: 30px;
+}
+/* ゴールデンルール */
+#golden_rule h1 {
+	grid-column-start: 2;
+	margin-left: 30px;
+}
+#golden_rule h1 span {
+	font-size: 75%;
+}
+
+.howto_icon {
+		padding: 10px;
+		width: 80px;
+		height: 80px;
+	}
+.gold_rule {
+	display: grid;
+	grid-template-columns: 30px 120px 1fr 30px; 
+	grid-template-rows: auto auto;
+	margin-bottom: 25px;
+}
+.howto_icon {
+	grid-column-start: 2;
+	grid-row-start: 1;
+	grid-row-end: span 2;
+	align-self: center;
+}
+.gold_rule h2 {
+	grid-column-start: 3;
+	grid-row-start: 1;
+	margin: 0; 
+	border-bottom: 1px solid #000028;
+}
+.setumei {
+	grid-column-start: 3;
+	grid-row-start: 2;
+}
+	
+#golden_rule {
+	grid-column-start: 2;
+	grid-column-end: -2;
+	grid-row-start: 4;
+	margin-bottom: 30px;
+	background-color: #DBDBF5;
+	color: #000028;
+}
+/* 入れ方 */
+#sub h1 {
+	margin: 20px 30px;
+	padding: 10px;
+	position: relative;
+	background-color: #F0A866;
+}
+#sub h1::before {
+	position: absolute;
+	content: '';
+	top: 100%;
+	left: 0;
+	border: none;
+	border-bottom: solid 15px transparent;
+	border-right: solid 20px rgb(141,126,113);
+}
+#sub h2 {
+	margin: 10px 50px;
+	border-bottom: solid 1px #000028;
+}
+#sub .sub_howto_tejun {
+	margin-left: 100px;
+	margin-right: 30px;
+	margin-top: 0;
+}
+.leaf_tea {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: span 3;
+	background-color: #DBDBF5;
+	color: #000028;
+}
+.teabag {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 5;
+	grid-row-end: span 3;
+	background-color: #DBDBF5;
+	color: #000028;
+}
+/*↑↑↑↑　紅茶入れ方ページここまで　↑↑↑↑*/
+
+/* >>>>> 共通フッター <<<<< */
+footer {
+  display: grid;
+  grid-template-columns: 100px 2fr 3fr 3fr 2fr 100px;
+  grid-template-rows: auto auto auto auto;
+}
+#pagetop {
+  grid-column-start: -3;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  align-self: start;
+  justify-slef: end;
+}
+.foot_logo {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+}
+.shop_info1 {
+  grid-column-start: 3;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+  justify-self: center;
+}
+.shop_info2 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  justify-self: end;
+  margin-right: 50px;
+}
+.shop_info3 {
+  grid-column-start: 4;
+  grid-column-end: span 2;
+  grid-row-start: 3;
+}
+#footer_navi {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: -2;
+}
+.copyright {
+  grid-column-start: -4;
+  grid-column-end: span 2;
+  grid-row-start: -2;
+  justify-self: end;
+  align-self: end;
+  margin-bottom: 20px;
+}
+
+
+
+
+/*メディアクエリ*/
+/*########## 1300px以上の時 #########*/
+@media (min-width: 1300px) {
+  /* ボディグリッド */
+  #main {
+    grid-column-start: 2;
+    grid-column-end: -2;
+  }
+}
+/*########## 1090px以下の時 #########*/
+@media (min-width: 600px) and (max-width: 1089px) {
+  #menu li a {
+	  font-size: 18px;
+    padding: 10px;
+  }
+  #concept h1 {
+    font-size: 30px;
+  }
+  #concept p {
+    font-size: 16px;
+  }
+  .sub_caption p {
+    font-size: 16px;
+  }
+  footer p {
+    font-size: 13px;
+  }
+  .shop_info2 {
+    margin-right: 15px;
+  }
+  /* グリッド */
+  /* >>>>> ボディ <<<<< */
+  body {
+    grid-template-columns: 60px 1fr 60px;
+  }
+  /* >>>>> フッタ <<<<< */
+  footer {
+    grid-template-columns: 60px 2fr 3fr 3fr 2fr 60px;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .foot_logo {
+    width: 150px;
+  }
+  .copyright {
+    margin-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: span 4;
+    grid-row-start: -1;
+    justify-self: center;
+  }
+  #footer_navi {
+    grid-column-end: span 4;
+    grid-row-start: -3;
+    font-size: 13px;
+  }
+}
+/*########## 676px以下の時 #########*/
+@media (max-width: 676px) {
+  /* グリッド */
+  /* >>>>> ボディ <<<<< */
+  body {
+    grid-template-columns: 15px 1fr 15px;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+  /* >>>>> ヘッダ <<<<< */
+  header {
+    grid-template-columns: 20px 1fr 1fr 20px;
+  }
+  .head_logo {
+    width: 100px;
+  }
+  .head_shop_name {
+    width: 140px;
+	  padding-top: 10px;
+	  margin-left: -10px;
+}
+	
+  /* >>>>> ナビゲーションメニュー <<<<< */
+
+	nav {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 1;
+		grid-row-end: -1;
+		width: 200px;
+		margin-right: -200px;
+		z-index: 100;
+		overflow: hidden;
+		justify-self: end;
+		align-self: start;
+		background: rgba(255,255,255,1);
+		transition: margin-right 0.3s ease-out;
+	}
+	body.open .page-cover {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 1;
+		grid-row-end: -1;
+		z-index: 50;
+		background-color: rgba(255,255,255,0.3);
+	}
+	body.open {
+		height: 100vh;
+		overflow: hidden;
+	}
+	html {
+		overflow-y: scroll;
+	}
+	/*開閉ボタン*/
+	button {
+		display: block;
+	}
+	body.open nav {
+	margin-right: 0;
+	}
+	body.open button {
+		z-index: 200;
+	}
+	body:not(.open) .fa-times {
+		display: none;
+	}
+	body.open .fa-bars {
+		display: none;
+	}
+#menu ul {
+		flex-direction: column;
+		margin-top: 68px;
+	}
+	#menu li a {
+		font-size: 16px;
+		padding: 16px 10px 16px 20px;		
+	}
+	#menu li a:hover {
+  animation-name: gradation;
+  animation-duration: 0s;
+  animation-fill-mode: both;
+}
+@keyframes gradation {
+  0% {
+    background: #ffffff;
+	  opacity: 0.8;
+    color: #000028;
+  }
+  100% {
+    background: #8F91AA;
+    color: #000028;
+    opacity: 0.8;
+  }
+	}
+  /* >>>>> コンセプト <<<<< */
+  #concept {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  #concept .img_magic {
+    margin-top: 20px;
+    grid-row-end: 1;
+  }
+  #concept h1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-size: 20px;
+  }
+	#concept p {
+    font-size: 15px;
+  }
+
+  #concept .concept_txt {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  /* >>>>> サブメニュー <<<<< */
+  #sub {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 10px 2fr 1fr 10px 2fr 1fr 10px 2fr 1fr;
+  }
+	  .sub_icon {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+  }
+  .sub_caption {
+    height: 100px;
+    margin: 0;
+    font-size: 10px;
+    align-self: start;
+  }
+  .sub_caption p {
+    margin: 0;
+    margin-top: -10px;
+	font-size: 15px;
+  }
+
+  .sub_leaf_img {
+    grid-column-end: 1;
+    grid-row-end: 1;
+  }
+  .leaf_caption {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .leaf_caption p {
+    padding-left: 10px;
+  }
+  .sub_linup_img {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    justify-self: end;
+  }
+  .linup_caption {
+    grid-row-start: 5;
+  }
+  .icon_cup {
+    text-align: right;
+  }
+  .linup_caption p {
+    padding-right: 0;
+  }
+  .sub_howto_image {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: -6;
+    grid-row-end: -6;
+  }
+  .howto_caption {
+    grid-column-start: 1;
+    grid-row-start: -5;
+  }
+  .howto_caption p {
+    padding-left: 10px;
+  }
+  .sub_shop_image {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: -3;
+    grid-row-end: -3;
+  }
+  .shop_caption {
+    grid-column-start: 1;
+    grid-row-start: -2;
+  }
+  .shop_caption p {
+    padding-right: 0;
+  }
+  /* >>>>> フッター <<<<< */
+  footer {
+    grid-template-columns: 20px 1fr 1fr 20px;
+    grid-template-rows: auto auto auto auto auto auto;
+    font-size: 12px;
+  }
+	.pagetop_color {
+  font-size: 30px;
+  color: #E07104;
+  margin-right: 0px;
+}
+  .foot_logo {
+    grid-column-start: 2;
+    display: none;
+  }
+	.foot_shopname_kanji {
+		margin-top: 18px;
+	}
+  .foot_shopname {
+    padding: 0 5px;
+    font-size: 28px;
+  }
+  .shop_info1 {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+  }
+  .shop_info2 {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    margin-right: 0;
+    justify-self: center;
+  }
+  .shop_info3 {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row-start: 4;
+    justify-self: center;
+  }
+  #footer_navi {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row-start: -3;
+	justify-self: center;
+  }
+  .copyright {
+    grid-column-start: 2;
+    grid-row-start: -2;
+    margin-bottom: 10px;
+    justify-self: center;
+  }
+
+/*↑↑↑↑　Homeページここまで　↑↑↑↑*/
+	
+/*↓↓↓↓　紅茶入れ方ページここから　↓↓↓↓*/
+/* メイン画像 */
+/* ゴールデンルール */
+#golden_rule h1 {
+	grid-column-start: 2;
+	margin-left: 30px;
+	font-size: 20px;
+}
+#golden_rule h1 span {
+	font-size: 75%;
+}
+
+.howto_icon {
+		width: 100px;
+		height: 100px;
+	}
+.gold_rule {
+	display: grid;
+	grid-template-columns: 30px 1fr 30px; 
+	grid-template-rows: auto auto;
+	margin-bottom: 25px;
+}
+.howto_icon {
+	grid-column-start: 2;
+	grid-row-start: 1;
+	grid-row-end: span 2;
+	align-self: center;
+	justify-self:center;
+}
+.gold_rule h2 {
+	grid-column-start: 2;
+	grid-row-start: 1;
+	font-size: 18px;
+}
+.setumei {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+	
+#golden_rule {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 4;
+	margin-bottom: 30px;
+	background-color: #DBDBF5;
+	color: #000028;
+}
+/* 入れ方 */
+	#sub {
+		grid-column-start: 1;
+		grid-column-end: -1;
+	}
+#sub h1 {
+	margin-left: 30px;
+	font-size: 20px;
+}
+#sub h2 {
+	margin: 10px 30px;
+	font-size: 18px;
+}
+#sub .sub_howto_tejun {
+	margin-left: 50px;
+	margin-right: 30px;
+	margin-top: 0;
+}
+.leaf_tea {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: span 5;
+	background-color: #DBDBF5;
+	color: #000028;
+}
+.teabag {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 7;
+	grid-row-end: span 5;
+	background-color: #DBDBF5;
+	color: #000028;
+}
+/*↑↑↑↑　紅茶入れ方ページここまで　↑↑↑↑*/
+
+
+
+
+
+
